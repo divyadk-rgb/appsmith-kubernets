@@ -1,2 +1,0 @@
-INSERT INTO public.workflows ("request_id", "environment_label", "created_at", "request_data","status")
-VALUES (gen_random_uuid(), '{{envLabel.selectedOptionValue}}', CURRENT_DATE, '{{ JSON.stringify({ sourceIp: srcIp.text, destinationIp: destIp.text }) }}','CREATED');

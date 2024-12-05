@@ -15,10 +15,10 @@ export default {
 			destinationIp: "192.168.1.2"  // Example destination IP
 		});
 
-		if (dropdownValue && srcIp.text && destIp.text) {
+		if (dropdownValue && srcIp.text && destIp.text && workflowType.text) {
 			if (ipv4Regex.test(srcIp.text) && ipv4Regex.test(destIp.text)) {
 				return Promise.all([
-					createWorkflowQuery.run(),   
+					saveWorkflowQuery.run(),   
 					// executeWorkflowApi.run() 
 				])
 					.then(() => showAlert('New workflow created successfully', 'Success'))
@@ -30,7 +30,7 @@ export default {
 			else if (ipv6Regex.test(srcIp.text) && ipv6Regex.test(destIp.text)) {
 				// return saveRequest.run(), createWorkflow.run()
 				return Promise.all([
-					createWorkflowQuery.run(),   // Run the PostgreSQL query
+					saveWorkflowQuery.run(),   // Run the PostgreSQL query
 					// executeWorkflowApi.run() // Run the API call
 				])
 					.then(() => showAlert('New workflow created successfully', 'Success'))
