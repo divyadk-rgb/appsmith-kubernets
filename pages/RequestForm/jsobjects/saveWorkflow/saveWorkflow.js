@@ -15,7 +15,7 @@ export default {
 			destinationIp: "192.168.1.2"  // Example destination IP
 		});
 
-		if (dropdownValue && srcIp.text && destIp.text && workflowType.text) {
+		if (dropdownValue && srcIp.text && destIp.text) {
 			if (ipv4Regex.test(srcIp.text) && ipv4Regex.test(destIp.text)) {
 				return Promise.all([
 					saveWorkflowQuery.run(),   

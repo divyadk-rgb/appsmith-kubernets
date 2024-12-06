@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.workflows (\"request_id\", \"workflow_type\", \"requested_by\", \"environment_label\", \"request_data\",\"status\")\nVALUES ('12345', '{{workflowType.text}}', '{{appsmith.user.username}}', '{{envLabel.selectedOptionValue}}', '{{ JSON.stringify({ sourceIp: srcIp.text, destinationIp: destIp.text }) }}','CREATED');\n",
+      "body": "INSERT INTO public.workflows (\"request_id\", \"workflow_type\", \"requested_by\", \"environment_label\", \"request_data\",\"status\")\nVALUES ('12345', 'Test workflow', '{{appsmith.user.username}}', '{{envLabel.selectedOptionValue}}', '{{ JSON.stringify({ sourceIp: srcIp.text, destinationIp: destIp.text }) }}','CREATED');\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
